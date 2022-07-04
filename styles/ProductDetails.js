@@ -57,6 +57,7 @@ export const Buy = styled.button`
     border:0.1em solid #413f3d;
     text-align:center;
     transition: all 0.2s;
+    cursor: pointer;
 
     :hover {
         color:#ffffff;

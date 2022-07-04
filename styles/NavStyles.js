@@ -48,5 +48,6 @@ export const NavItems = styled.div`
         position: absolute;
         right: -10%;
         top: -20%;
+        pointer-events: none;
     }
 `;

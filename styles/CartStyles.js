@@ -65,15 +65,44 @@ export const EmptyStyle = styled.div`
   }
 `;
 
+// export const Checkout = styled.div`
+//   button {
+//     background: white;
+//     padding: 1rem 2rem;
+//     width: 100%;
+//     color: white;
+//     margin-top: 2rem;
+//     cursor: pointer;
+//   }
+// `;
+
 export const Checkout = styled.div`
   button {
-    background: white;
-    padding: 1rem 2rem;
+    box-sizing: border-box; 
+    text-decoration:none;
     width: 100%;
-    color: white;
-    margin-top: 2rem;
+    height: 5vh;
+    font-weight:300;
+    background-color: #ffffff;
+    color: #413f3d;
+    padding:0.3em 1.2em;
+    border-radius:1rem;
+    border:0.1em solid white;
+    text-align:center;
+    transition: all 0.2s;
     cursor: pointer;
-  }
-`;
+   
 
+    :hover {
+        color:#ffffff;
+        background-color: transparent;
+    }
+    @media all and (max-width:30em){
+    a.button1{  
+        display:block;
+        margin:0.4em auto;
+    }
+    }
+  }
+`
 
