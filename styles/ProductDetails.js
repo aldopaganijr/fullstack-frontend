@@ -40,13 +40,31 @@ export const Quantity = styled.div`
     }
 
     span{
-        color:#778899;
+        color:#ffffff;
     }
 `;
 
-export const Buy = styled.button`
+export const Buy = styled.button`  
+    box-sizing: border-box; 
+    text-decoration:none;
     width: 100%;
-    background-color: white;
-    color: black;
-    font-weight: 500;
+    background-color: transparent;
+    font-weight:300;
+    color:#FFFFFF;
+    padding:0.3em 1.2em;
+    border-radius:0.12em;
+    border:0.1em solid #FFFFFF;
+    text-align:center;
+    transition: all 0.2s;
+
+    :hover {
+        color:#000000;
+        background-color:#FFFFFF;
+    }
+    @media all and (max-width:30em){
+    a.button1{  
+        display:block;
+        margin:0.4em auto;
+    }
+    }
 `;

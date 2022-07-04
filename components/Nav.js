@@ -5,7 +5,7 @@ import { NavStyles, NavItems } from "../styles/NavStyles";
 export default function Nav () {
     return(
         <NavStyles>
-        <Link href={'/'}>Grails</Link>
+        <Link href={'/'}>Alla prima</Link>
         <NavItems>
             <div>
                 <FiShoppingBag />

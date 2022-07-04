@@ -7,12 +7,13 @@ export const NavStyles = styled.nav`
     justify-content: space-between;
     align-items: center;
     font-size: 1rem;
+    padding-bottom: 3rem;
     
 
     a{
         font-size: 5rem;
-        font-family: 'Montserrat Subrayada', sans-serif;
-        padding-bottom: 0.5rem;
+        font-family: 'EB Garamond', serif;
+        padding-bottom: 1rem;
     }
 `;
 
