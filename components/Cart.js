@@ -1,37 +1,71 @@
 import {
   CartStyle,
-  CartItemsStyle,
   Card,
   EmptyStyle,
   CartWrapper,
   CardInfo,
   Checkout,
+  Cards,
+  CheckoutText,
 } from "../styles/CartStyles";
 import { Quantity } from "../styles/ProductDetails";
 import { FaShoppingCart } from "react-icons/fa";
 import { AiFillPlusCircle, AiFillMinusCircle } from "react-icons/ai";
+
+const card = {
+  hidden: {opacity: 0, scale: 0.8 },
+  show: {opacity: 1, scale: 1 },
+};
+
+const cards = {
+  hidden: {opacity: 1},
+  show: {
+    opacity: 1,
+    transition: {
+      delayChildren: 0.4,
+      staggerChildren: 0.1,
+    },
+  },
+};
+
 import { useStateContext } from "../lib/context";
 
 export default function Cart() {
-  const { cartItems, setShowCart, onAdd, onRemove, totalPrice } = useStateContext();
+  const { cartItems, setShowCart, onAdd, onRemove, totalPrice } =
+    useStateContext();
 
   return (
-    <CartWrapper onClick={() => setShowCart(false)}>
-      <CartStyle onClick={(e) => e.stopPropagation()}>
+    <CartWrapper
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      onClick={() => setShowCart(false)}
+    >
+      <CartStyle
+        initial={{ x: "50%" }}
+        animate={{ x: 0 }}
+        exit={{ x: "50%" }}
+        transition={{ type: "tween" }}
+        onClick={(e) => e.stopPropagation()}
+      >
         {cartItems.length < 1 && (
-          <EmptyStyle>
-            <h1>beautiful art is waiting for a new home...</h1>
+          <EmptyStyle
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.4 }}
+          >
             <FaShoppingCart />
           </EmptyStyle>
         )}
+        <Cards layout variants={cards} initial="hidden" animate="show">
         {cartItems.length >= 1 &&
           cartItems.map((item) => {
             return (
-              <Card key={item.slug}>
+              <Card layout variants={card} key={item.slug}>
                 <img src={item.image.data.attributes.formats.small.url} />
                 <CardInfo>
                   <h3>{item.title}</h3>
-                  <h3>${item.price}</h3>
+                  <h3>{item.price}$</h3>
                   <Quantity>
                     <span>Quantity</span>
                     <button onClick={() => onRemove(item)}>
@@ -46,12 +80,19 @@ export default function Cart() {
               </Card>
             );
           })}
+          </Cards>
+        <Checkout
+          layout
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+        >
           {cartItems.length >= 1 && (
-            <Checkout>
-              <h3>Subtotal: ${totalPrice}</h3>
+            <CheckoutText>
+              <h3>Subtotal ${totalPrice}</h3>
               <button>Purchase</button>
-            </Checkout>
+            </CheckoutText>
           )}
+        </Checkout>
       </CartStyle>
     </CartWrapper>
   );
