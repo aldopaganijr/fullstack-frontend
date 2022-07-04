@@ -7,13 +7,15 @@ const client = createClient({ url: process.env.NEXT_PUBLIC_BACKEND_API });
 
 function MyApp({ Component, pageProps }) {
   return (
+  <div className="App">
     <StateContext>
       <Provider value={client}>
         <Nav />
         <Component {...pageProps} />
       </Provider>
     </StateContext>
-  );
+  </div>
+  )
 }
 
 export default MyApp;

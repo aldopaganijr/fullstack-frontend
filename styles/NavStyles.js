@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const NavStyles = styled.nav`
-    color: white;
+    color: #413f3d;
     min-height: 15vh;
     display: flex;
     justify-content: space-between;
@@ -12,8 +12,7 @@ export const NavStyles = styled.nav`
 
     a{
         font-size: 5rem;
-        font-family: 'EB Garamond', serif;
-        padding-bottom: 1rem;
+        font-family: 'Cinzel', serif;
     }
 `;
 
@@ -21,6 +20,7 @@ export const NavItems = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-around;
+    color: #413f3d;
     div {
         margin-left: 3rem;
         position: relative;
@@ -34,5 +34,19 @@ export const NavItems = styled.div`
     }
     svg{
         font-size: 1.5rem;
+    }
+    span {
+        background: #413f3d;
+        color: white;
+        width: 1.3rem;
+        height: 1.3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        font-size: .75rem;
+        position: absolute;
+        right: -10%;
+        top: -20%;
     }
 `;

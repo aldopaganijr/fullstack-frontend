@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const ProductStyle = styled.div`
-    background-color: #FFFFFF;
+    background-color: #ded1bd;
     position: relative;
     display: flex;
     flex-direction: column;

@@ -1,18 +1,23 @@
 import Link from "next/link";
-import {FiShoppingBag} from 'react-icons/fi'
+import { FiShoppingBag } from "react-icons/fi";
 import { NavStyles, NavItems } from "../styles/NavStyles";
+import Cart from "./Cart";
+import { useStateContext } from "../lib/context";
 
-export default function Nav () {
-    return(
-        <NavStyles>
-        <Link href={'/'}>Alla prima</Link>
-        <NavItems>
-            <div>
-                <FiShoppingBag />
-                <h3>Cart</h3>
-            </div>
-        </NavItems>
-        </NavStyles>
-    );
+export default function Nav() {
+  const { showCart, setShowCart, totalQuantities } = useStateContext();
+  console.log(showCart);
+  return (
+    <NavStyles>
+      <Link href="/">Alla prima</Link>
+      <NavItems>
+        <div onClick={() => setShowCart(true)}>
+          {totalQuantities > 0 && <span>{totalQuantities}</span>}
+          <FiShoppingBag />
+          <h3>Cart</h3>
+        </div>
+      </NavItems>
+      {showCart && <Cart />}
+    </NavStyles>
+  );
 }
-
