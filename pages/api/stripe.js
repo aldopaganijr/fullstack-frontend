@@ -16,10 +16,10 @@ export default async function handler(req, res) {
         },
 
         allow_promotion_codes: true,
-        shipping_options: [
-          { shipping_rate: "shr_1LHw5iH9laIRNrLR8F57Bu38" },
-          { shipping_rate: "shr_1LHwGoH9laIRNrLRbrKUDHuq" },
-        ],
+        // shipping_options: [
+        //   { shipping_rate: "shr_1LHw5iH9laIRNrLR8F57Bu38" },
+        //   { shipping_rate: "shr_1LHwGoH9laIRNrLRbrKUDHuq" },
+        // ],
         line_items: req.body.map((item) => {
           return {
             price_data: {
