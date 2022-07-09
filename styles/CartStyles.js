@@ -20,10 +20,6 @@ export const CartStyle = styled(motion.div)`
   padding: 2rem 2.5rem;
   overflow-y: scroll;
   position: relative;
-
-  @media all and (max-width:480px){ 
-        min-width: 100vw
-    }
 `;
 
 export const Card = styled(motion.div)`

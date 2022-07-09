@@ -13,10 +13,4 @@ export const ProductStyle = styled.div`
     h2{
         padding: 0.5rem 0rem;
     }
-
-    @media all and (max-width:480px){
-        display: flex;
-        justify-content:center;
-        align-items: center;
-    }
 `;

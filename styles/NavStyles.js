@@ -8,14 +8,7 @@ export const NavStyles = styled.nav`
     align-items: center;
     font-size: 1rem;
     padding-bottom: 3rem;
-
-    @media all and (max-width:480px){
-        display: flex;
-        justify-content:center;
-        align-items: center;
-    }
     
-
     a{
         font-size: 5rem;
         font-family: 'Cinzel', serif;
