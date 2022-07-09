@@ -9,6 +9,12 @@ export const DetailsStyle = styled.div`
     img{
     width: 40%; 
     }
+
+    @media all and (max-width:480px){
+        display: flex;
+        justify-content:center;
+        align-items: center;
+    }
 `
 
 export const ProductInfo = styled.div`

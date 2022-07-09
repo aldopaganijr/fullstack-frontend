@@ -54,6 +54,7 @@ export default function Cart() {
       onClick={() => setShowCart(false)}
     >
       <CartStyle
+        className="cart-adjustment"
         initial={{ x: "50%" }}
         animate={{ x: 0 }}
         exit={{ x: "50%" }}
