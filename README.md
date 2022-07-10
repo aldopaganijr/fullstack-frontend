@@ -1,8 +1,9 @@
-![fullstack-frontend-2 vercel app_ (1)](https://user-images.githubusercontent.com/105445990/178154671-b676bfa8-c656-48d8-bafa-f7796dee5dc8.png)
+
 
 <h1 align="center">Hi 👋, I'm Aldo Pagani Jr.</h1>
 <h3 align="center">This Project is a Art E-commerce Site</h3>
 
+![fullstack-frontend-2 vercel app_ (1)](https://user-images.githubusercontent.com/105445990/178154671-b676bfa8-c656-48d8-bafa-f7796dee5dc8.png)
 - 🌱 Im currently learning **react**
 
 - 👨‍💻 All my projects are linked here! [https://aldopaganijr.netlify.app](https://aldopaganijr.netlify.app)
